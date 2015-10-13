@@ -1,8 +1,16 @@
 /**
  * Created by carlos.matheu on 13/10/2015.
  */
-(function () {
+module.exports = function (grunt) {
     'use strict';
 
-    console.log('\n\nBUILD OK');
-}());
+    // stupid task
+    grunt.registerTask('stupid', function() {
+        console.log('stupid task going on!');
+    });
+
+    // default task
+    grunt.registerTask('default', function () {
+        console.log('\n\nBUILD OK');
+    });
+};
